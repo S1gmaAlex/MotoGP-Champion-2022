@@ -1,0 +1,121 @@
+.container{
+    margin: auto;
+    max-width: 1200px;
+    
+}
+
+.li {
+    list-style: none;
+}
+
+td{
+    text-align: center;
+}
+
+.header_nav {display: flex;}
+
+.header_list_2 {padding-left: 5px;}
+
+.header_list_3 {
+    width: 80px;
+    height: 40px;
+    margin-top: 70px;
+    margin-left: 400px;
+}
+
+.div_li_1 {
+    margin-top: 5px;
+    display: flex;
+}
+
+.li_left_1 {
+    padding: 1px 1px 1px 1px;
+    border: 1px solid black;
+
+}
+
+.li_left_3 {
+    text-align: center;
+    padding: 1px 1px 1px 1px;
+    border: 1px solid black;
+}
+.li_center_3 {
+    margin: 40px 0px 50px 0px;
+    font-weight: 700;
+}
+.li_center_4 {
+    font-weight: 700;
+}
+.li_center_1 {
+    font-size: 14px;
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.li_right_1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.li_right_2 {
+    border: 3px solid black;
+    width: 28px;
+    height: 28px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 80px;
+    padding: 2px 3px 2px 3px;
+}
+
+.li_left_1, .li_left_3 {
+    font-size: 14px;
+}
+
+.tbl{
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.table_1 {
+    font-weight: 700;
+    font-size: 15px;
+}
+.div_th_1, .div_th_2, .div_th_3 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    padding-right: 10px;
+}
+.div_th_4, .div_th_5, .div_th_6, .div_th_7, .div_th_8, .div_th_9, .div_th_10, .div_th_11, .div_th_12, .div_th_13, .div_th_14, .div_th_15, .div_th_16, .div_th_17, .div_th_18, .div_th_19, .div_th_20, .div_th_21, .div_th_22, .div_th_23 {
+    font-size: 12.5px;
+    padding-right: 7px;
+}
+.table {
+    margin: 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 0px 0px 0px 0px;
+    width:auto;
+    height: auto;
+}
+.div_th_ct {
+    padding-right: 10px;
+}
+
+.li_end_1, .li_end_2{
+    font-size: 10px;
+}
+.li_end_3, .li_end_4{
+    font-size: 12px;
+}
+.li_end_6{
+    font-size: 12px;
+    font-weight: 700;
+}
+.div_end_1{
+    display: flex;
+}
+.img_end{
+    margin-left: 900px;
+}

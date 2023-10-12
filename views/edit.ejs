@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT</title>
+</head>
+<body>
+    <form action="/update/<%= racers._id%>" method="post">
+        <h2>Editing Racer <%= racers.name%> ...</h2>
+        <label>Name</label>
+        <input type="text" name="name" value="<%= racers.name%>">
+        <label>nationality</label>
+        <input type="text" name="nationality" value="<%= racers.nationality%>">
+        <label>leader</label>
+        <input type="number" name="leader" value="<%= racers.leader%>">
+        <label>previous</label>
+        <input type="number" name="previous" value="<%= racers.previous%>">
+        <label>QAT</label>
+        <input type="number" name="QATrace" value="<%= racers.QATrace%>"><br><br>
+        <label>INA</label>
+        <input type="number" name="INArace" value="<%= racers.INArace%>">
+        <label>ARG</label>
+        <input type="number" name="ARGrace" value="<%= racers.ARGrace%>">
+        <label>AME</label>
+        <input type="number" name="AMErace" value="<%= racers.AMErace%>">
+        <label>POR</label>
+        <input type="number" name="PORrace" value="<%= racers.PORrace%>">
+        <label>SPA</label>
+        <input type="number" name="SPArace" value="<%= racers.SPArace%>"><br><br>
+        <label>FRA</label>
+        <input type="number" name="FRArace" value="<%= racers.FRArace%>">
+        <label>ITA</label>
+        <input type="number" name="ITArace" value="<%= racers.ITArace%>">
+        <label>CAT</label>
+        <input type="number" name="CATrace" value="<%= racers.CATrace%>">
+        <label>GER</label>
+        <input type="number" name="GERrace" value="<%= racers.GERrace%>">
+        <label>NED</label>
+        <input type="number" name="NEDrace" value="<%= racers.NEDrace%>"><br><br>
+        <label>GBR</label>
+        <input type="number" name="GBRrace" value="<%= racers.GBRrace%>">
+        <label>AUT</label>
+        <input type="number" name="AUTrace" value="<%= racers.AUTrace%>">
+        <label>RSM</label>
+        <input type="number" name="RSMrace" value="<%= racers.RSMrace%>">
+        <label>ARA</label>
+        <input type="number" name="ARArace" value="<%= racers.ARArace%>">
+        <label>JPN</label>
+        <input type="number" name="JPNrace" value="<%= racers.JPNrace%>"><br><br>
+        <label>THA</label>
+        <input type="number" name="THArace" value="<%= racers.THArace%>">
+        <label>AUS</label>
+        <input type="number" name="AUSrace" value="<%= racers.AUSrace%>">
+        <label>MAL</label>
+        <input type="number" name="MALrace" value="<%= racers.MALrace%>">
+        <label>VAL</label>
+        <input type="number" name="VALrace" value="<%= racers.VALrace%>"><br><br>
+        <button class="submitBtn" type="submit">Submit</button>
+    </form> 
+</body>
+</html>

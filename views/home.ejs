@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>MotoGP</title>
+</head>
+
+<body  class="container">
+    <header class="app">
+        <div class="header">
+            <nav class="header_nav">
+                <ul style="list-style: none" class="header_list_1">
+                    <li class="li_left_1">Circuit Ricardo Tormo</li>
+                    <li class="li_left_2">
+                        <img width="145px" height="110px" src="/img/pic1.png" alt="">
+                    </li>
+                    <li class="li_left_3">4005 m.</li>
+                </ul>
+
+                <ul style="list-style: none" class="header_list_2">
+                    <div class="div_li_1">
+                        <li class="li_center_1">Results and timing service provided by</li>
+                        <li class="li_center_2">
+                            <img width="100px" height="17px" src="/img/pic2.png" alt="">
+                        </li>
+                    </div>
+                    <li class="li_center_3">GRAN PREMIO MOTUL DE LA COMUNITAT VALENCIANA</li>
+                    <li class="li_center_4">World Championship Classification</li>
+                </ul>
+
+                <ul style="list-style: none" class="header_list_3">
+                    <li class="li_right_1">MotoGP™</li>
+                    <li class="li_right_2">30</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <div class="table">
+        <form action="/add" method="get">
+            <button type="submit"><i class="fa-solid fa-user-plus"></i></button>
+        </form>
+        <table class="tbl" >
+            <thead>
+                <tr class="tro">
+                    <th>Places</th>
+                    <th class="table_1">Rider</th>
+                    <th class="div_th_ct"></th>
+                    <div class="div_table_1">
+                        <th class="div_th_1">Points</th>
+                        <th class="div_th_2">Leader</th>
+                        <th class="div_th_3">Previous</th>
+                    </div>
+                    <div class="div_table_2">
+                        <th class="div_th_4">QAT</th>
+                        <th class="div_th_5">INA</th>
+                        <th class="div_th_6">ARG</th>
+                        <th class="div_th_7">AME</th>
+                        <th class="div_th_8">POR</th>
+                        <th class="div_th_9">SPA</th>
+                        <th class="div_th_10">FRA</th>
+                        <th class="div_th_11">ITA</th>
+                        <th class="div_th_12">CAT</th>
+                        <th class="div_th_13">GER</th>
+                        <th class="div_th_14">NED</th>
+                        <th class="div_th_15">GBR</th>
+                        <th class="div_th_16">AUT</th>
+                        <th class="div_th_17">RSM</th>
+                        <th class="div_th_18">ARA</th>
+                        <th class="div_th_19">JPN</th>
+                        <th class="div_th_20">THA</th>
+                        <th class="div_th_21">AUS</th>
+                        <th class="div_th_22">MAL</th>
+                        <th class="div_th_23">VAL</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < racers.length; i++) { %>
+                <tr class="tro">
+                    <td ><%= [i + 1]%></td>
+                    <td class="table_1" style="text-align: left;"><%= racers[i].name%></td>
+                    <td class="div_th_ct"><%= racers[i].nationality%></td>
+                    <div class="div_table_1">
+                        <td class="div_th_1" style="font-weight: bold" ><%= racers[i].totalscore%></td>
+                        <td class="div_th_2"><%= racers[i].leader%></td>
+                        <td class="div_th_3"><%= racers[i].previous%></td>
+                    </div>
+                    <div class="div_table_2">
+                        <td class="div_th_4" ><%= racers[i].QATrace%></td>
+                        <td class="div_th_5" ><%= racers[i].INArace%></td>
+                        <td class="div_th_6" ><%= racers[i].ARGrace%></td>
+                        <td class="div_th_7" ><%= racers[i].AMErace%></td>
+                        <td class="div_th_8" ><%= racers[i].PORrace%></td>
+                        <td class="div_th_9" ><%= racers[i].SPArace%></td>
+                        <td class="div_th_10"><%= racers[i].FRArace%></td>
+                        <td class="div_th_11"><%= racers[i].ITArace%></td>
+                        <td class="div_th_12"><%= racers[i].CATrace%></td>
+                        <td class="div_th_13"><%= racers[i].GERrace%></td>
+                        <td class="div_th_14"><%= racers[i].NEDrace%></td>
+                        <td class="div_th_15"><%= racers[i].GBRrace%></td>
+                        <td class="div_th_16"><%= racers[i].AUTrace%></td>
+                        <td class="div_th_17"><%= racers[i].RSMrace%></td>
+                        <td class="div_th_18"><%= racers[i].ARArace%></td>
+                        <td class="div_th_19"><%= racers[i].JPNrace%></td>
+                        <td class="div_th_20"><%= racers[i].THArace%></td>
+                        <td class="div_th_21"><%= racers[i].AUSrace%></td>
+                        <td class="div_th_22"><%= racers[i].MALrace%></td>
+                        <td class="div_th_23"><%= racers[i].VALrace%></td>
+                        <td style="display: flex;">
+                            <form action="/edit/<%=racers[i]._id%>" method="get">
+                                <button type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </form>
+                            <form action="/delete/<%=racers[i]._id%>" method="get">
+                              <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </div>
+                </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </div>
+    </main>
+    <footer style="margin-top:50px">
+    <div >
+        <ul style="list-style: none" class="end_1">
+            <li class="li_end_1">These data/results cannot be reproduced, stored and/or transmitted in whole or in part by any manner of electronic, mechanical, photocopying, recording, broadcasting or otherwise now known or herein after developed without the previous express consent by the
+                copyright owner, except for reproduction in daily press and regular printed publications on sale to the public within 60 days of the event related to those data/results and always provided that copyright symbol appears together as follows below.</li>
+            <li class="li_end_2">© DORNA, 2022</li>
+            <li class="li_end_3">Official MotoGP Timing by TISSOT</li>
+            <div class="div_end_1">
+                <li class="li_end_7">
+                <li class="li_end_4">www.motogp.com</li>
+                <img class="img_end" width="220px" height="70px" src="/img/pic3.png" alt="">
+                </li>
+            </div>
+            <li class="li_end_6">Cheste, Sunday, November 06, 2022</li>
+        </ul>
+    </div>
+    </footer>
+
+</body>
+
+</html>
